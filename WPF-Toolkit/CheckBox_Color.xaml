@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="WPF_Toolkit.CheckBox_Color"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_Toolkit"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="30">
+    <Grid Margin="0,0,0.2,0">
+        <Ellipse x:Name="ellipse" Stroke="#FF2B2B2B" MouseLeftButtonDown="ellipse_MouseLeftButtonDown" Height="25" Margin="0,0,0.6,-0.2" Width="25" StrokeThickness="2">
+            <Ellipse.Fill>
+                <LinearGradientBrush EndPoint="1,0" MappingMode="RelativeToBoundingBox" StartPoint="1,0.75">
+                    <GradientStop Color="#FF0B0A0A" Offset="0"/>
+                    <GradientStop Color="#FF666865" Offset="1"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Canvas x:Name="chk_color" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="25" Margin="2.5,2.5,0,0" Visibility="Hidden">
+            <Ellipse x:Name="ellipsechk" Stroke="#FF2B2B2B" MouseLeftButtonDown="ellipsechk_MouseLeftButtonDown" Height="25" Margin="0,0,0.6,-0.2" Width="25" StrokeThickness="2">
+                <Ellipse.Fill>
+                    <LinearGradientBrush EndPoint="1,0" MappingMode="RelativeToBoundingBox" StartPoint="1,0.75">
+                        <GradientStop Color="#FF1A1818" Offset="0"/>
+                        <GradientStop Color="#FF55FF00" Offset="1"/>
+                    </LinearGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Canvas>
+        <Canvas x:Name="chk_colorRed" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="25" Margin="2.5,2.5,0,0" Visibility="Hidden" MouseLeftButtonDown="chk_colorRed_MouseLeftButtonDown">
+            <Ellipse x:Name="ellipsechk2" Stroke="#FF2B2B2B" MouseLeftButtonDown="ellipsechk_MouseLeftButtonDown" Height="25" Margin="0,0,0.6,-0.2" Width="25" StrokeThickness="2">
+                <Ellipse.Fill>
+                    <LinearGradientBrush EndPoint="1,0" MappingMode="RelativeToBoundingBox" StartPoint="1,0.75">
+                        <GradientStop Color="#FF1A1818" Offset="0"/>
+                        <GradientStop Color="Red" Offset="1"/>
+                    </LinearGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Canvas>
+    </Grid>
+</UserControl>

@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="WPF_Toolkit.DatePicker_dark"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_Toolkit"
+             mc:Ignorable="d" 
+             d:DesignHeight="175" Width="195" Loaded="UserControl_Loaded">
+    <Grid Margin="0,0,0.6,0.2">
+        <Rectangle Stroke="Black" RadiusY="9.5" RadiusX="9.5">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0B0A0A" Offset="1"/>
+                    <GradientStop Color="#FF686565"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <GroupBox x:Name="groupBox" Header="Datum" Margin="10,7,10,0" Height="76" VerticalAlignment="Top" Foreground="White">
+            <GroupBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0B0A0A" Offset="1"/>
+                    <GradientStop Color="#FF686565"/>
+                </LinearGradientBrush>
+            </GroupBox.BorderBrush>
+            <StackPanel Margin="0,0,0,-3.4" HorizontalAlignment="Left" Width="166">
+                <ComboBox x:Name="cb_month" Height="20" Margin="95,5,11.4,0" IsEnabled="False" DropDownClosed="cb_month_DropDownClosed"/>
+
+                <ComboBox x:Name="cb_year" Height="20" Margin="12,-20,0,0"  HorizontalAlignment="Left" Width="75" DropDownClosed="cb_year_DropDownClosed"/>
+                <ComboBox x:Name="cb_day" Height="20" Margin="95,6,0,0" HorizontalAlignment="Left" Width="60" IsEnabled="False" DropDownClosed="cb_day_DropDownClosed" />
+
+                <Label x:Name="lbl_date" Content="31.12.2016" HorizontalAlignment="Left" Width="80" Margin="11,-24,0,0" FontSize="13.333" Foreground="White"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="groupBox_Copy" Header="Zeit" Margin="10,0,10.2,12" Height="76" VerticalAlignment="Bottom" Foreground="White">
+            <GroupBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0B0A0A" Offset="1"/>
+                    <GradientStop Color="#FF686565"/>
+                </LinearGradientBrush>
+            </GroupBox.BorderBrush>
+            <StackPanel Margin="0,0,-58,-3.4" HorizontalAlignment="Left" Width="198">
+                <ComboBox x:Name="cb_hour" Height="20" Margin="27,5,0,0" IsEnabled="False" HorizontalAlignment="Left" Width="60" DropDownClosed="cb_hour_DropDownClosed"/>
+                <Label x:Name="lbl_time" Content="15:30.00" HorizontalAlignment="Left" Width="65" Margin="15,2,0,0" FontSize="13.333" Foreground="White"/>
+                <ComboBox x:Name="cb_minute_Copy" HorizontalAlignment="Right" Width="60" Height="20" Margin="0,-77,44,0" IsEnabled="False" DropDownClosed="cb_minute_Copy_DropDownClosed"/>
+                <ComboBox x:Name="cb_seconds" Height="20" Margin="94,-26,0,0" HorizontalAlignment="Left" Width="60" IsEnabled="False" DropDownClosed="cb_seconds_DropDownClosed" />
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</UserControl>
